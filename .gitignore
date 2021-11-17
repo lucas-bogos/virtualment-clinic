@@ -1,6 +1,6 @@
 # folder packages 
-/node_modules/
-/node_modules/**/*
+node_modules
+node_modules/**/*
 
 # arquivos ocultos
 .git
