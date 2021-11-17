@@ -5,3 +5,7 @@
 
 *.txt
 *.sqlite
+
+# folder packages 
+/node_modules/
+
