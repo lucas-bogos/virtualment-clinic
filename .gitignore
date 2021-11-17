@@ -1,0 +1,7 @@
+# arquivos ocultos
+.git
+.vscode
+.env
+
+*.txt
+*.sqlite
