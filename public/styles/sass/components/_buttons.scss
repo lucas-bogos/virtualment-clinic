@@ -1,0 +1,15 @@
+// billhead section
+.billhead {
+  &__header {
+    &__button {
+      @include remove-select-appearance();
+      @include set-background-color('water-green-color');
+      width: 134.56px;
+      height: 52.83px;
+      left: 647.69px;
+      top: 377px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
+}
