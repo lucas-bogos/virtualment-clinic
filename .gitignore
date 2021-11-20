@@ -2,10 +2,14 @@
 node_modules
 node_modules/**/*
 
-# arquivos ocultos
+# files/folders ocultos
 .git
-.vscode
+.vscode/*
 .env
 
 *.txt
 *.sqlite
+
+# irrelevantes para push remote
+package-lock.json
+yarn.lock

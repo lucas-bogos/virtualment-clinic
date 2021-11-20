@@ -1,0 +1,28 @@
+// remove unit from a given value.
+@function strip-unit($value) {
+  @if (type-of($value) == 'number' and not unitless($value)) {
+    @return $value / ($value * 0 + 1);
+  }
+  @return $value;
+}
+
+// converte pixel para rem
+@function px-to-rem($value: 16px, $base: 16px) {
+  @return (strip-unit($value) / strip-unit($base)) * 1rem;
+}
+
+// converte pixel para em
+@function px-to-em($value: 16px, $base: 16px) {
+  @return (strip-unit($value) / strip-unit($base)) * 1em;
+}
+
+// retorna um tamanho da fonte conforme tua configuração
+@function font-size($size, $font-sizes: $font-size) {
+  @return (map-get($font-sizes, $size));
+}
+
+// priorizar um elemento especifico para renderização prioritária
+@function priority-render($value) {
+  $important: $value !important;
+  @return $important;
+}

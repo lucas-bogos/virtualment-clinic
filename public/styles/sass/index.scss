@@ -1,0 +1,14 @@
+// files avulso  
+@import 'functions';
+@import 'variables';
+@import 'generic';
+@import 'fonts';
+
+// mixins para styles
+@import './mixins/utils';
+
+// components das paginas
+@import './components/menu-bar';
+
+// todas as sections de conteudo
+@import './sections/billhead';
