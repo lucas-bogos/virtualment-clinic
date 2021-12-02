@@ -1,0 +1,90 @@
+.main-login-container {
+  @include set-background-color('background-menu-color');
+  @include set-text-color('white-color');
+  @include flex-center();
+  width: 100vw;
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ), url('/images/login-banner.jpg') no-repeat;
+  
+  background-position: center;
+  background-size: cover;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  &__form {
+    background-color: rgba(131, 131, 131, 0.527);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 60vh;
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+    }
+
+    input:not(.btn-submit,
+    .main-login-container__form__buttons__dont-have-login) {
+      padding-left: 8px;
+      font-family: 'Futura';
+      width: 80%;
+      line-height: 35px;
+      border-style: none;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 80%;
+
+      &__dont-have-login {
+        padding-top: 10px;
+      }
+    }
+  }
+
+  a {
+    font-size: 14px;
+    @include set-text-color('white-color');
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover:not(.back) {
+    @include set-text-color('black-color');
+  }
+
+  .btn-submit {
+    @extend .billhead__header__button;
+    @include set-background-color('water-green-color');
+    @include set-text-color('black-color');
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    @include set-background-color('black-color');
+    @include set-text-color('white-color');
+  }
+}
+
+.back {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}

@@ -10,6 +10,32 @@
 // components das paginas
 @import './components/menu-bar';
 @import './components/buttons';
+@import './components/effects';
 
 // todas as sections de conteudo
+
+// home
 @import './sections/billhead';
+@import './sections/carl-jung';
+@import './sections/character';
+@import './sections/tratament';
+@import './sections/free-security';
+@import './sections/footer';
+@import './sections/informative';
+
+// interfaces
+
+// agendar
+@import './interfaces/agende';
+
+// sobre nós
+@import './interfaces/about-us';
+
+// depoimentos
+@import './interfaces/depoiments';
+
+// como funciona
+@import './interfaces/how-work';
+
+// login do user
+@import './interfaces/login';

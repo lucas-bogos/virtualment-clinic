@@ -46,8 +46,8 @@ header {
       @include set-text-color('text-normal-menu-color');
     }
 
-    .home > a {
-      @include set-text-color('white-color');
+    a:hover {
+      color: map-get($colors, 'water-green-color');
     }
   }
 }

@@ -8,6 +8,9 @@ $colors: (
   'water-green-color': #26F0F1,
   'light-green-color': #77ACA2,
   'dark-blue-color': #284B63,
+  'steel-teal-color': #658e9c,
+  'black-color': black,
+  'gray-light-color': #d3d3d3
 );
 
 // tamanhos de fonte
@@ -46,4 +49,4 @@ $header-size-menu-desktop: (
   'y': 68.6px
 );
 
-$section-height: 567px;
+$section-height: 567px + 1px;

@@ -1,0 +1,44 @@
+.elements-footer {
+  @extend .thinker-container;
+  @include set-background-color('black-color');
+  color: map-get($colors, 'white-color');
+  @include headings() {
+    margin-top: 20px;
+  }
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__e {
+    @include flex-center();
+    flex-direction: column;
+    
+    ul {
+      list-style: none;
+      width: 100%;
+      margin-top: 20px
+    }
+    
+    ul > li > a {
+      @include set-text-color('text-normal-menu-color');
+      text-decoration: none;
+    }
+
+    a:hover {
+      @include set-text-color('water-green-color');
+    }
+
+    > img {
+      @include width-height(5em);
+    }
+  }
+}
+
+.infos {
+  @include set-background-color('black-color');
+  @include set-text-color('white-color');
+  @include padding-x(114.17px);
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}

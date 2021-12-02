@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/css/index.min.css">
+  <title>Sobre nós | Virtualment Clinic</title>
+</head>
+<body>
+  <header>
+    <div class="menu-container">
+      <div class="menu-container__logo">
+        <figure>
+          <a href="http://127.0.0.1:4000/">
+            <img src="/icons/logo.png" alt="Virtualment Clinic">
+            <figcaption hidden>Virtualment Clinic Logo</figcaption>
+          </a>
+        </figure>
+      </div>
+      <nav>
+        <ul>
+          <li id="home" class="home">
+            <a href="http://127.0.0.1:4000/" >Início<span></span>
+          </li>
+          <li id="how-work" class="how-work">
+            <a href="http://127.0.0.1:4000/como-funciona" >Como funciona<span></span></a>
+          </li>
+          <li id="depoiments" class="depoiments">
+            <a href="http://127.0.0.1:4000/depoimentos">Depoimentos<span></span></a>
+          </li>
+          <li id="about-us" class="about-us">
+            <a href="http://127.0.0.1:4000/sobre-nos" style="color: #FFF;" >Sobre nós<span></span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-container__login">
+        <figure>
+          <a href="http://127.0.0.1:4000/login">
+            <img src="/icons/login.png" alt="Icone de login">
+            <figcaption hidden>Para fazer o teu login</figcaption>
+          </a>
+        </figure>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="agende-container">
+      <div class="agende-container__text">
+        <center><h1 class="agende-container__title">Agende o teu atendimento</h1><br><br></center>
+        <p>Preencha o formulário abaixo e aguarde o contato.</p>
+      </div>
+    </section>
+    <section class="contact">
+      <form class="contact__form" action="/sendform" method="post">
+        <label for="name">
+          Nome
+          <input type="text" name="name" id="name" placeholder="Digite o nome completo">
+        </label>
+        <label for="old">
+          Idade
+          <input type="number" name="old" id="old" placeholder="Insira sua idade">
+        </label>
+        <label for="description">
+          Descrição
+          <input type="text" name="description" id="description" placeholder="Descreva a situação do paciênte">
+        </label><br><br>
+        <center><input class="btn-submit" type="submit" name="signin" id="signin"></center>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="elements-footer">
+      <div class="elements-footer__e">
+        <img src="/icons/home.png" alt="">
+        <h2>INSTITUCIONAL</h2>
+        <ul>
+          <li><a href="/sobre-nos">Sobre nós</a></li>
+          <li><a href="/seja-membro">Seja um membro</a></li>
+          <li><a href="/termos-uso-privacidade">Termos de uso e privacidade</a></li>
+        </ul>
+      </div>
+      <div class="elements-footer__e">
+        <img src="/icons/comment.png" alt="">
+        <h2>DEPOIMENTOS</h2>
+        <ul>
+          <li><a href="/depoimentos">Especialistas e colaboradores</a></li>
+          <li><a href="/depoimentos">Nossos pacientes</a></li>
+        </ul>
+      </div>
+      <div class="elements-footer__e">
+        <img src="/icons/group.png" alt="">
+        <h2>PARA PACIENTES</h2>
+        <ul>
+          <li><a href="/como-funciona">Como funciona</a></li>
+          <li><a href="/#free-cost">Quanto custa</a></li>
+        </ul>
+      </div>
+      <div class="elements-footer__e">
+        <img src="/icons/social-media.png" alt="">
+        <h2>REDES SOCIAIS</h2>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Linkedin</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="infos">
+      <p>&copy; Todos os direitos reservados</p>
+      <p>Virtual Psychological Clinic 2021</p>
+    </div>
+  </footer>
+</body>
+</html>

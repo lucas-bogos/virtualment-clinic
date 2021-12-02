@@ -1,0 +1,42 @@
+.agende-container {
+  @extend .billhead;
+
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url('/images/agendando-consulta.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__text {
+    width: 50%;
+  }
+}
+
+.contact {
+  @include flex-center();
+  width: 100%;
+  height: $section-height + map-get($header-size-menu-desktop, 'y');
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      width: 70%;
+      display: flex;
+
+      > input {
+        right: 0;
+      }
+    }
+  }
+
+  .btn-submit {
+    @extend .billhead__header__button;
+    @include set-background-color('black-color');
+    color: map-get($colors, 'white-color');
+    cursor: pointer;
+  }
+}

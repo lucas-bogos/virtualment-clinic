@@ -4,12 +4,19 @@
     &__button {
       @include remove-select-appearance();
       @include set-background-color('water-green-color');
+      font-weight: bold;
       width: 134.56px;
       height: 52.83px;
       left: 647.69px;
       top: 377px;
       border-radius: 30px;
       cursor: pointer;
+      transition: .3s;
+    }
+
+    &__button:hover {
+      background-color: black;
+      color: map-get($colors, 'white-color');
     }
   }
 }

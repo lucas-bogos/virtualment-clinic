@@ -1,6 +1,6 @@
 # folder packages 
-node_modules
-node_modules/**/*
+/node_modules
+/node_modules/**/*
 
 # files/folders ocultos
 .git
@@ -9,7 +9,8 @@ node_modules/**/*
 
 *.txt
 *.sqlite
+*.log
+*.lock
 
 # irrelevantes para push remote
 package-lock.json
-yarn.lock

@@ -1,0 +1,46 @@
+.character-container {
+  @include set-background-color('light-green-color');
+  height: $section-height + map-get($header-size-menu-desktop, 'y');
+  color: map-get($colors, 'white-color');
+  font-family: 'Futura';
+  text-align: center;
+  line-height: 100px;
+  width: 100%;
+
+  &__itens {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 80%;
+
+    &__card {
+      @include set-background-color('white-color');
+      @include set-text-color('black-color');
+      border-radius: 20px;
+      width: 300px;
+      height: 450px;
+      line-height: 20px;
+      // box-shadow:
+        // 1.8px 1.8px 2px -10px rgba(0, 0, 0, 0.179),
+        // 6.1px 6.1px 8.4px -10px rgba(0, 0, 0, 0.208),
+        // 16.4px 16.4px 24.3px -10px rgba(0, 0, 0, 0.247),
+        // 53px 53px 80px -10px rgba(0, 0, 0, 0.3);
+
+      h2 {
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        padding: 30px;
+        text-align: justify;
+      }
+      
+      img {
+        width: 300px;
+        border-radius: 20px 20px 0px 0px;
+      }
+    }
+  }
+}

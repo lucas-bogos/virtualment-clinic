@@ -1,5 +1,5 @@
 Arguments: 
-  /home/lucas/.nvm/versions/node/v14.18.0/bin/node /home/lucas/.yarn/bin/yarn.js add gulp-cli
+  /home/lucas/.nvm/versions/node/v14.18.0/bin/node /home/lucas/.yarn/bin/yarn.js add express-session connect-flash
 
 PATH: 
   /home/lucas/.yarn/bin:/home/lucas/.config/yarn/global/node_modules/.bin:/home/lucas/.yarn/bin:/home/lucas/.config/yarn/global/node_modules/.bin:/home/lucas/.nvm/versions/node/v14.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/lucas/Documentos/virtualment-clinic/node_modules/babel-cli/node_modules/v8flags/.npmignore'
+  Error: EACCES: permission denied, unlink '/home/lucas/Documentos/virtualment-clinic/node_modules/gulp-cli/node_modules/v8flags/LICENSE'
 
 npm manifest: 
   {
@@ -22,7 +22,7 @@ npm manifest:
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-      "start": "babel-node --unhandled-rejections=strict ./server/index.js"
+      "start": "babel-node --unhandled-rejections=strict index.js"
     },
     "author": "",
     "license": "ISC",
@@ -47,6 +47,7 @@ npm manifest:
       "webpack-dev-server": "^4.5.0"
     },
     "dependencies": {
+      "body-parser": "^1.19.0",
       "dotenv": "^10.0.0",
       "express": "^4.17.1",
       "sequelize": "^6.9.0",
@@ -2290,6 +2291,22 @@ Lockfile:
   body-parser@1.19.0:
     version "1.19.0"
     resolved "https://registry.npmjs.org/body-parser/-/body-parser-1.19.0.tgz"
+    integrity sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
+    dependencies:
+      bytes "3.1.0"
+      content-type "~1.0.4"
+      debug "2.6.9"
+      depd "~1.1.2"
+      http-errors "1.7.2"
+      iconv-lite "0.4.24"
+      on-finished "~2.3.0"
+      qs "6.7.0"
+      raw-body "2.4.0"
+      type-is "~1.6.17"
+  
+  body-parser@^1.19.0:
+    version "1.19.0"
+    resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.19.0.tgz#96b2709e57c9c4e09a6fd66a8fd979844f69f08a"
     integrity sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
     dependencies:
       bytes "3.1.0"

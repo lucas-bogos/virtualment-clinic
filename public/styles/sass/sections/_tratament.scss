@@ -1,0 +1,7 @@
+.tratament-specialist-container {
+  @extend .thinker-container;
+
+  &__image > figure > img {
+    width: 500px;
+  }
+}

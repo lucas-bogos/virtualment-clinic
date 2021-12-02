@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/css/index.min.css">
+  <title>Login | Virtualment Clinic</title>
+</head>
+<body>
+  <div class="main-login-container">
+    <form class="main-login-container__form" action="/creating-user" method="post">
+      <h1>Cadastrar</h1><br>
+      <label for="name">
+        Nome
+        <input type="text" name="name" id="name" placeholder="Primeiro nome apenas">
+      </label>
+      <label for="email">
+        Email
+        <input type="email" name="email" id="email" placeholder="Insira o seu melhor email">
+      </label>
+      <label for="passwd">
+        Senha
+        <input type="password" name="password" id="password" placeholder="Senha com no mínimo 8 caracteres">
+      </label><br>
+      <div class="main-login-container__form__buttons">
+        <input class="btn-submit" type="submit" name="signin" id="signin" value="Cadastrar no sistema">
+      </div>
+      <div id="notuserexists"></div>
+    </form>
+    <p><a class="back" href="http://127.0.0.1:4000/">Voltar para o Início</a></p>
+  </div>
+  <script src="/scripts/stylingMenuItens.js"></script>
+  <script src="/scripts/typingEffect.js"></script>
+</body>
+</html>

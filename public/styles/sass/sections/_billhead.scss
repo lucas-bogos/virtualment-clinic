@@ -2,18 +2,23 @@
   @include flex-center;
   @include set-text-color('white-color');
   height: $section-height;
+  text-align: center;
 
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, 0.7)
-    ), url('../../../../assets/images/main-banner.jpg') no-repeat;
+    ), url('/images/main-banner.jpg') no-repeat;
     background-position: center;
     background-size: cover;
   
+  p {
+    font-size: 15px;
+  }
+  
   h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 27px;
   }
 
   &__header {
