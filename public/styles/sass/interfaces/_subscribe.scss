@@ -1,0 +1,8 @@
+.main-login-container {
+  &__form {
+    &__buttons-subscribe {
+      display: flex;
+      justify-content: center !important;
+    }
+  }
+}

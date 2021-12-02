@@ -1,0 +1,11 @@
+.thinker-container {
+  @include flex-center;
+  width: 100%;
+  height: $section-height + map-get($header-size-menu-desktop, 'y');
+  
+  > p {
+    @include text-pattern();
+    width: 55%;
+    text-align: justify;
+  }
+}

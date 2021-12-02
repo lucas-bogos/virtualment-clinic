@@ -11,19 +11,23 @@
 @import './components/menu-bar';
 @import './components/buttons';
 @import './components/effects';
+@import './components/scroll-up';
 
 // todas as sections de conteudo
 
 // home
 @import './sections/billhead';
-@import './sections/carl-jung';
+@import './sections/services';
 @import './sections/character';
 @import './sections/tratament';
-@import './sections/free-security';
 @import './sections/footer';
 @import './sections/informative';
 
 // interfaces
+
+// casdastrar
+
+@import './interfaces/_subscribe';
 
 // agendar
 @import './interfaces/agende';

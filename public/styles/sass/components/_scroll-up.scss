@@ -1,0 +1,9 @@
+.go-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+
+  a > img {
+    @include width-height(40px);
+  }
+}
