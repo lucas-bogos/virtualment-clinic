@@ -33,15 +33,12 @@ app.use(session({
   saveUninitialized: false
 }))
 
-
-// user test do database
-// User.create({ name: 'Lucas', email: 'bogoslucas1@gmail.com', password: 'bogos1726' });
-
 // communication with database
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/pages/main.html'));
 });
 
+// routes
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/pages/login.html'));
 });
