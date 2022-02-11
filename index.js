@@ -6,9 +6,9 @@ import settings from './settings';
 import sequelize from './database/setup';
 
 const User = require('./database/models/User');
-const bodyParser = require('body-parser');
-const connectFlash = require('connect-flash');
 const session = require('express-session');
+
+import "dotenv/config";
 
 // intancias
 const app = express();
@@ -20,9 +20,9 @@ const { hostName, accessPort, sessionSecret } = settings;
 // database init
 sequelize.sync().then(() => console.log('Database is ready!'))
 
-// use permissions or configs
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+// middlewares
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/assets'));
@@ -31,11 +31,12 @@ app.use(session({
   secret: sessionSecret,
   resave: false,
   saveUninitialized: false
-}))
+}));
 
 // communication with database
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/pages/main.html'));
+  console.log(req.session.login)
 });
 
 // routes
@@ -64,7 +65,11 @@ app.get('/seja-membro', (req, res) => {
 });
 
 app.get('/agendar-consulta', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/pages/agendar.html'));
+  if(req.session.login) {
+    console.log(`O usuário ${req.session.login} realmente está logado!`)
+    return res.sendFile(path.join(__dirname, '/public/pages/agendar.html'));
+  }
+  return res.status(301).redirect('/login');
 });
 
 app.get('/register', (req, res) => {
@@ -73,10 +78,13 @@ app.get('/register', (req, res) => {
 
 app.post('/processing', async (req, res) => {
   const { name, email, password } = req.body;
+  req.session.login = name;
+  console.log(`O usuário ${req.session.login} foi logado!`)
 
   const userExists = await User.findOne({
     where: {
-      'email': email
+      'email': email,
+      'password': password
     }
 });
 
