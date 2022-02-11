@@ -36,7 +36,6 @@ app.use(session({
 // communication with database
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/pages/main.html'));
-  console.log(req.session.login)
 });
 
 // routes
@@ -78,9 +77,6 @@ app.get('/register', (req, res) => {
 
 app.post('/processing', async (req, res) => {
   const { name, email, password } = req.body;
-  req.session.login = name;
-  console.log(`O usuário ${req.session.login} foi logado!`)
-
   const userExists = await User.findOne({
     where: {
       'email': email,
@@ -91,6 +87,9 @@ app.post('/processing', async (req, res) => {
   if(!userExists) {
     res.send("Usuário inexistente!");
   } else {
+    req.session.login = name;
+    console.log(`O usuário ${req.session.login} foi logado!`)
+    
     return (
       res.status(303).redirect('/agendar-consulta')
     )
