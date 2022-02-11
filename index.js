@@ -27,8 +27,14 @@ app.use(express.json());
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/assets'));
 
+const hour = 3600000;
+
 app.use(session({ 
   secret: sessionSecret,
+  cookie: {
+    maxAge: hour,
+    expires: new Date(Date.now() + hour)
+  },
   resave: false,
   saveUninitialized: false
 }));
@@ -89,7 +95,7 @@ app.post('/processing', async (req, res) => {
   } else {
     req.session.login = name;
     console.log(`O usuário ${req.session.login} foi logado!`)
-    
+
     return (
       res.status(303).redirect('/agendar-consulta')
     )
